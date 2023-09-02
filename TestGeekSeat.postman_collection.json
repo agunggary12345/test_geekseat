@@ -1,0 +1,1923 @@
+{
+	"info": {
+		"_postman_id": "4e7d7ce4-c5b3-4119-8b7e-3f005c0deeb8",
+		"name": "TestGeekSeat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11082181"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "CustomerRegister",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_name\": string,\r\n    \"address\": string,\r\n    \"phone\": string,\r\n    \"email\": string,\r\n    \"password\": string,\r\n    \"password_conf\": string\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/customer/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customer",
+								"register"
+							]
+						},
+						"description": "Create new user"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4bxxxx",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_name\": \"Bambang\",\r\n    \"address\": \"Jln. Soekarno Hatta\",\r\n    \"phone\": \"081xxxxxxxxx\",\r\n    \"email\": \"bambang@test.id\",\r\n    \"password\": \"test1234\",\r\n    \"password_conf\": \"test1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customer/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Unauthorized access.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_name\": \"TTest\",\r\n    \"address\": \"Jln. Soekarno Hatta\",\r\n    \"phone\": \"081xxxxxx\",\r\n    \"email\": \"test@test.id\",\r\n    \"password\": \"test1234\",\r\n    \"password_conf\": \"test1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customer/register",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"register"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"message\": \"Register success.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CustomerLogin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": string,\r\n    \"password\": string\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/customer/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customer",
+								"login"
+							]
+						},
+						"description": "Login customer as user"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"bambang@test.id\",\r\n    \"password\": \"test1234s\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customer/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 400,\n    \"message\": \"Incorrect email or password!\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"bambang@test.id\",\r\n    \"password\": \"test1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customer/login",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": {\n        \"customer_id\": 7,\n        \"email\": \"bambang@test.id\",\n        \"token\": \"c730f6af8a6195fbd135dfc452e8dbbc9e4c1046\"\n    },\n    \"message\": \"Ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CustomerDetail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/customer/detail/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customer",
+								"detail",
+								"<id>"
+							]
+						},
+						"description": "Get customer info"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046sdsds",
+										"type": "text"
+									},
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/customer/detail/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"detail",
+										"7"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/customer/detail/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"detail",
+										"7"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": {\n        \"customer_id\": 7,\n        \"customer_name\": \"Bambang Soet\",\n        \"address\": \"Jln. Lingkar\",\n        \"phone\": \"081xxxxxxxxx\",\n        \"email\": \"bambang@test.id\"\n    },\n    \"message\": \"Ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CustomerUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer_name\": string,\r\n    \"address\": string,\r\n    \"phone\": string\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/customer/update/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"customer",
+								"update",
+								"<id>"
+							]
+						},
+						"description": "Update customer info"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_name\": \"Bambang Soet\",\r\n    \"address\": \"Jln. Lingkar\"    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customer/update/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"update",
+										"7"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 400,\n    \"message\": \"Some attributes are not found!\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customer_name\": \"Bambang Soet\",\r\n    \"address\": \"Jln. Lingkar\",\r\n    \"phone\": \"081xxxxxxxxx\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/customer/update/7",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"customer",
+										"update",
+										"7"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"message\": \"Update profile success.\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Customer API"
+		},
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "ItemList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/item/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/item/list",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"item",
+										"list"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Unauthorized access.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/item/list",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"item",
+										"list"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"item_id\": 4,\n            \"item_no\": \"B001\",\n            \"item_name\": \"Beng Beng\",\n            \"uom\": \"PCS\",\n            \"unit_price\": 3000\n        },\n        {\n            \"item_id\": 3,\n            \"item_no\": \"C001\",\n            \"item_name\": \"Coca Cola\",\n            \"uom\": \"BTL\",\n            \"unit_price\": 12000\n        },\n        {\n            \"item_id\": 1,\n            \"item_no\": \"I001\",\n            \"item_name\": \"Indomie\",\n            \"uom\": \"PCS\",\n            \"unit_price\": 4000\n        },\n        {\n            \"item_id\": 2,\n            \"item_no\": \"P001\",\n            \"item_name\": \"Pocary Sweat\",\n            \"uom\": \"BTL\",\n            \"unit_price\": 9000\n        },\n        {\n            \"item_id\": 5,\n            \"item_no\": \"R001\",\n            \"item_name\": \"Roma Malkist\",\n            \"uom\": \"PCS\",\n            \"unit_price\": 7000\n        }\n    ],\n    \"message\": \"Ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ItemDetail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/item/detail/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"item",
+								"detail",
+								"<id>"
+							]
+						},
+						"description": "Get single item info"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text",
+										"disabled": true
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{url}}/item/detail/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"item",
+										"detail",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Unauthorized access.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/item/detail/2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"item",
+										"detail",
+										"2"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": {\n        \"item_id\": 2,\n        \"item_no\": \"P001\",\n        \"item_name\": \"Pocary Sweat\",\n        \"uom\": \"BTL\",\n        \"unit_price\": 9000\n    },\n    \"message\": \"Ok\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Get list of all items"
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "OrderList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/list",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/order/list",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"list"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/order/list",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"list"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"order_id\": 6,\n            \"order_no\": \"20230901007\",\n            \"order_date\": \"2023-09-02\",\n            \"order_amount\": 0,\n            \"customer_id\": 7,\n            \"customer_name\": \"Bambang Soet\",\n            \"email\": \"bambang@test.id\",\n            \"phone\": \"081xxxxxxxxx\"\n        }\n    ],\n    \"message\": \"Ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderDetail",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/detail/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"detail",
+								"<id>"
+							]
+						},
+						"description": "Get single order info"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c7",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/order/detail/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"detail",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/order/detail/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"detail",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": {\n        \"order_id\": 6,\n        \"order_no\": \"20230901007\",\n        \"order_date\": \"2023-09-02\",\n        \"order_amount\": 0,\n        \"customer_id\": 7,\n        \"customer_name\": \"Bambang Soet\",\n        \"email\": \"bambang@test.id\",\n        \"phone\": \"081xxxxxxxxx\",\n        \"items\": [\n            {\n                \"seq\": 1,\n                \"quantity\": 10,\n                \"unit_price\": 3000,\n                \"item_amount\": 30000,\n                \"item_id\": 4,\n                \"item_no\": \"B001\",\n                \"item_name\": \"Beng Beng\",\n                \"uom\": \"PCS\"\n            },\n            {\n                \"seq\": 2,\n                \"quantity\": 5,\n                \"unit_price\": 9000,\n                \"item_amount\": 45000,\n                \"item_id\": 2,\n                \"item_no\": \"P001\",\n                \"item_name\": \"Pocary Sweat\",\n                \"uom\": \"BTL\"\n            }\n        ]\n    },\n    \"message\": \"Ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderCreate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_no\": string\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"create"
+							]
+						},
+						"description": "Create single order customer"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c7",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_no\": \"20230901005\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_no\": \"20230901005\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"status_code\": 201,\r\n    \"data\": {\r\n        \"order_id\": 6,\r\n        \"order_no\": \"20230901005\",\r\n        \"order_date\": \"2023-09-02\",\r\n        \"order_amount\": 0,\r\n        \"customer_id\": 7,\r\n        \"customer_name\": \"Bambang Soet\",\r\n        \"email\": \"bambang@test.id\",\r\n        \"phone\": \"081xxxxxxxxx\"\r\n    },\r\n    \"message\": \"Create order success.\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_no\": string\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order/update/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"update",
+								"<id>"
+							]
+						},
+						"description": "Update single order customer"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_no\": \"20230901007\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order/update/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"update",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_no\": \"20230901007\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order/update/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"update",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"data\": {\n        \"order_id\": 6,\n        \"order_no\": \"20230901007\",\n        \"order_date\": \"2023-09-02\",\n        \"order_amount\": 0,\n        \"customer_id\": 7,\n        \"customer_name\": \"Bambang Soet\",\n        \"email\": \"bambang@test.id\",\n        \"phone\": \"081xxxxxxxxx\"\n    },\n    \"message\": \"Update order success.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order/delete/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"delete",
+								"<id>"
+							]
+						},
+						"description": "Delete single order customer"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/order/delete/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"delete",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/order/delete/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order",
+										"delete",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,    \n    \"message\": \"Delete order success.\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Get list of all orders customer"
+		},
+		{
+			"name": "OrderDetail",
+			"item": [
+				{
+					"name": "OrderDetailList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order_detail/list/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order_detail",
+								"list",
+								"<id>"
+							]
+						},
+						"description": "Get list of all order details by order id"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c7",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/order_detail/list/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order_detail",
+										"list",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/order_detail/list/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order_detail",
+										"list",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 200,\n    \"data\": [\n        {\n            \"order_id\": 6,\n            \"seq\": 1,\n            \"quantity\": 50,\n            \"unit_price\": 12000,\n            \"item_amount\": 600000,\n            \"item_id\": 3,\n            \"item_no\": \"C001\",\n            \"item_name\": \"Coca Cola\",\n            \"uom\": \"BTL\"\n        }\n    ],\n    \"message\": \"Ok\"\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderDetailCreate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"order_id\": int,\r\n    \"item_id\": int,\r\n    \"quantity\": float\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order_detail/create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order_detail",
+								"create"
+							]
+						},
+						"description": "Create single order detail by order id"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_id\": 6,\r\n    \"item_id\": 2,\r\n    \"quantity\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order_detail/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order_detail",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"order_id\": 6,\r\n    \"item_id\": 2,\r\n    \"quantity\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order_detail/create",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order_detail",
+										"create"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"data\": {\n        \"order_id\": 6,\n        \"seq\": 2,\n        \"quantity\": 5,\n        \"unit_price\": 9000,\n        \"item_amount\": 45000,\n        \"item_no\": \"P001\",\n        \"item_name\": \"Pocary Sweat\",\n        \"uom\": \"BTL\"\n    },\n    \"message\": \"Create order detail success.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderDetailUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seq\": int,\r\n    \"item_id\": int,\r\n    \"quantity\": float\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order_detail/update/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order_detail",
+								"update",
+								"<id>"
+							]
+						},
+						"description": "Update single order detail by order id"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a61",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"seq\": 1,\r\n    \"item_id\": 3,\r\n    \"quantity\": 50\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order_detail/update/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order_detail",
+										"update",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"seq\": 1,\r\n    \"item_id\": 3,\r\n    \"quantity\": 50\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order_detail/update/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order_detail",
+										"update",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 201,\n    \"data\": {\n        \"order_id\": \"6\",\n        \"seq\": 1,\n        \"quantity\": 50,\n        \"unit_price\": 12000,\n        \"item_amount\": 600000,\n        \"item_no\": \"C001\",\n        \"item_name\": \"Coca Cola\",\n        \"uom\": \"BTL\"\n    },\n    \"message\": \"Update order detail success.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "OrderDetailDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seq\": int\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/order_detail/delete/<id>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order_detail",
+								"delete",
+								"<id>"
+							]
+						},
+						"description": "Delete single order details by order id"
+					},
+					"response": [
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c7",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"seq\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order_detail/delete/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order_detail",
+										"delete",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 401,\n    \"message\": \"Token unrecognized.\"\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "xx44b091s9c62bcf9418ad846dd0e4b5dfcdee4b",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token c730f6af8a6195fbd135dfc452e8dbbc9e4c1046",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"seq\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/order_detail/delete/6",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"order_detail",
+										"delete",
+										"6"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"status_code\": 201,    \r\n    \"message\": \"Delete order detail success.\"\r\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": " http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
